@@ -1,0 +1,44 @@
+.flex-container {
+    display: flex;
+
+    width: 95%;
+    max-width: 90rem;
+    border: 5px solid #000;
+    padding: 2em;
+}
+
+.flex-item {
+    margin: 0.5rem;
+    border: 5px solid #aaa;
+    background-color: #000;
+    color: #fff;
+    padding: 0.5em;
+    /*width: 325px;
+    nothing happened when I added a width*/
+}
+
+/*  1.0 Predict what will happen when you 
+        add a width here.
+        1.1 Set it and see if you were right 
+   
+    2.0 What happens when you:
+        2.1 change the below declaration to a max-width 
+        2.2 change the below declaration to a min-width 
+      
+    3.0 Along with the width, what happens when you
+        add a mix-width and max-width?
+*/
+
+.flex-item:nth-child(1) {
+    flex-grow: 1;
+    /* 1 */
+    width: 325px;
+    /* 3 */
+}
+
+.flex-item:nth-child(2) {
+    background: steelblue;
+    /* 2 */
+    max-width: 325px;
+    /*with it being min-width we got overflow. Didn't look like item 2 is going beyond 325 at the smallest size which gives overflow*/
+}
